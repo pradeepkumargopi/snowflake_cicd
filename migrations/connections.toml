@@ -1,0 +1,7 @@
+[cicdtest]
+account = "io63122.central-india.azure"
+user = "pradeep"
+password = "Training@123"
+warehouse = "COMPUTE_WH"
+database = "TRAINING_NEW"
+schema = "DAY03"
