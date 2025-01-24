@@ -34,7 +34,7 @@ jobs:
         run:  ~/snowflake/snowsql -v
 
       - name: Setup Snowsql config
-        run: ls -a ~/.snowsql
+        run: cat $GITHUB_WORKSPACE/migrations/connection.txt>~/.snowsql/config 
       
       - name: Set permssions for shell script
         run: chmod u+x $GITHUB_WORKSPACE/migrations/clonedb.sh
