@@ -39,6 +39,9 @@ jobs:
       - name: Set permssions for shell script
         run: chmod u+x $GITHUB_WORKSPACE/migrations/clonedb.sh
 
+      - name: Set permssions for lib
+        run: chmod 777 /usr/lib/libcrypto.so
+
       - name: Install 
         run: ln -s libcrypto.so.1.1 /usr/lib/libcrypto.so
 
