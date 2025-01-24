@@ -32,18 +32,12 @@ jobs:
     
       - name: Test installation
         run:  ~/snowflake/snowsql -v
-      
-      - name: Set Password
-        run: export SNOWSQL_PWD=Training@123
 
+      - name: Setup Snowsql config
+        run: ls -a /usr/.snowsql/
+      
       - name: Set permssions for shell script
         run: chmod u+x $GITHUB_WORKSPACE/migrations/clonedb.sh
-
-      - name: Set permssions for lib
-        run: chmod 777 /usr/lib/libcrypto.so
-
-      - name: Install 
-        run: ln -s libcrypto.so.1.1 /usr/lib/libcrypto.so
 
       - name: Call snowsql via shell script to clone DB before deployment
         run: $GITHUB_WORKSPACE/migrations/clonedb.sh
