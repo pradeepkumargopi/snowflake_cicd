@@ -43,7 +43,7 @@ jobs:
         run: pip install snowflake-connector-python
 
       - name: Run Clone DB script via python
-        run: $GITHUB_WORKSPACE/migrations/python create_clone.py
+        run: python $GITHUB_WORKSPACE/migrations/create_clone.py
 
         
       - name: Run schemachange
