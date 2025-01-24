@@ -38,6 +38,9 @@ jobs:
 
       - name: Print config
         run: cat ~/.snowsql/config
+
+      - name: Install oscrypto
+        run: pip install oscrypto
       
       - name: Set permssions for shell script
         run: chmod u+x $GITHUB_WORKSPACE/migrations/clonedb.sh
