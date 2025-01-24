@@ -1,4 +1,4 @@
-[cicd]
+[connections.cicd]
 accountname = io63122.central-india.azure
 username = pradeep
 password = Training@123
