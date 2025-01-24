@@ -9,7 +9,7 @@ export -f print_log
 
 run_workflow () {
     print_log "INFO" "Running workflow"
-        snowsql -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -q "create database training_new_bkp clone training_new;"
+        ~/snowflake/snowsql -a $SF_ACCOUNT -u $SF_USERNAME -q "create database training_new_bkp clone training_new;"
 }
 
 ## running workflow
