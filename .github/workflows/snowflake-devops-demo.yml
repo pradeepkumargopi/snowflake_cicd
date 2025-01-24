@@ -33,8 +33,11 @@ jobs:
       - name: Test installation
         run:  ~/snowflake/snowsql -v
       
-      - name: CHeck install path
-        run: ls -a ~/
+      - name: Set Password
+        run: SNOWSQL_PWD=Training@123
+
+      - name: Call snowsql via shell script to clone DB before deployment
+        run: $GITHUB_WORKSPACE/clonedb.sh
 
       - name: Run schemachange
         env:
