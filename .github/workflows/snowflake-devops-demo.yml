@@ -32,6 +32,9 @@ jobs:
     
       - name: Test installation
         run:  ~/snowflake/snowsql -v
+      
+      - name: CHeck install path
+        run: ls -a ~/.profile
 
       - name: Run schemachange
         env:
