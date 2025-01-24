@@ -9,7 +9,7 @@ export -f print_log
 
 run_workflow () {
     print_log "INFO" "Running workflow"
-        ~/snowflake/snowsql -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -f ${GITHUB_WORKSPACE}/${clone_sql_file_name}
+        ~/snowflake/snowsql -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -f ${GITHUB_WORKSPACE}/backup_db.sql
 }
 
 ## running workflow
