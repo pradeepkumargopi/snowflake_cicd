@@ -34,7 +34,7 @@ jobs:
         run:  ~/snowflake/snowsql -v
       
       - name: Set Password
-        run: SNOWSQL_PWD=Training@123
+        run: export SNOWSQL_PWD=Training@123
 
       - name: Set permssions for shell script
         run: chmod u+x $GITHUB_WORKSPACE/migrations/clonedb.sh
