@@ -37,7 +37,7 @@ jobs:
         run: SNOWSQL_PWD=Training@123
 
       - name: Call snowsql via shell script to clone DB before deployment
-        run: $GITHUB_WORKSPACE/clonedb.sh
+        run: $GITHUB_WORKSPACE/migrations/clonedb.sh
 
       - name: Run schemachange
         env:
