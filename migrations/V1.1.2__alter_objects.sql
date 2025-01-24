@@ -1,1 +1,1 @@
-alter table training_new.demo.hello_world modify add age number;
+alter table training_new.demo.hello_world add age number;
