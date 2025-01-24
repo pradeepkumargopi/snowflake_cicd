@@ -38,8 +38,8 @@ jobs:
           python --version
           echo "Step 1: Installing schemachange"
           pip install schemachange
-          echo "Step 2: Installing snowsql"
-          pip install snowsql
+          echo "snowsql version"
+          snowsql --version
           
           echo "Step 2: Running schemachange"
           schemachange -f $GITHUB_WORKSPACE/migrations --connections-file-path $GITHUB_WORKSPACE/migrations/connections.toml --connection-name cicdtest -c $SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
