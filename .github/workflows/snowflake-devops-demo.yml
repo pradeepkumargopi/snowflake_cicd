@@ -34,7 +34,7 @@ jobs:
         run:  ~/snowflake/snowsql -v
       
       - name: CHeck install path
-        run: ls -a ~/.profile
+        run: ls -a ~/
 
       - name: Run schemachange
         env:
@@ -49,7 +49,7 @@ jobs:
           python --version
           echo "Step 1: Installing schemachange"
           pip install schemachange
-          echo "Step2: Intalling python-snowflake connector"
+          echo "Step 2: Intalling python-snowflake connector"
           pip install snowflake-connector-python
           
           
