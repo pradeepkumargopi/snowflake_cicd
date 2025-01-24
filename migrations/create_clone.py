@@ -6,4 +6,4 @@ ctx = snowflake.connector.connect(
         role = "ACCOUNTADMIN"
     )
 	
-res = con.cursor().execute('create database tranining_new_backup clone tranining_new')
+res = ctx.cursor().execute('create database tranining_new_backup clone tranining_new')
