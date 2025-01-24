@@ -10,7 +10,7 @@ export -f print_log
 run_workflow () {
     print_log "INFO" "Running workflow"
     export SNOWSQL_PWD=Training@123
-        ~/snowflake/snowsql -c cicdtest -o log_level=DEBUG -q "create database training_new_bkp clone training_new;"
+        ~/snowflake/snowsql -c cicd -o log_level=DEBUG -q "create database training_new_bkp clone training_new;"
 }
 
 ## running workflow
